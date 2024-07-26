@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau3</title>
+</head>
+<body>
+<label for="arrayInput">Nhập các phần tử của mảng (cách nhau bằng dấu phẩy):</label>
+<input type="text" id="arrayInput" placeholder="Ví dụ: 1,2,3,4,5,6,7,8,9,10"><br><br>
+<button onclick="sortArray()">Sắp xếp mảng</button>
+<p id="result"></p>
+<script>
+    function sortArray() {
+
+        let arrayInput = document.getElementById('arrayInput').value;
+
+
+        let array = arrayInput.split(',').map(Number);
+
+
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+
+                    let temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+
+
+        document.getElementById('result').innerText = `Mảng sau khi sắp xếp: ${array.join(', ')}`;
+    }
+</script>
+</body>
+</html>

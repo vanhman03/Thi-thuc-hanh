@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    let sumOfOdds=0;
+    let sumOfEvens=0;
+    let numbers=[];
+    let n=+prompt("Bạn muốn nhập bao nhiêu phần tử");
+    if(n<=20){
+        for (let i = 0; i<n; i++) {
+            let number = +prompt("Nhap vao");
+            numbers.push(number);}
+        for (let j=0;j<numbers.length;j++){
+            if(numbers[j]%2===0){
+                sumOfEvens=sumOfEvens+numbers[j];
+            }
+            else{
+                sumOfOdds=numbers[j]+sumOfOdds
+            }
+        }
+        let result=sumOfEvens-sumOfOdds;
+        document.write(result);}
+
+</script>
+</body>
+</html>

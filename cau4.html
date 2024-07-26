@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau4</title>
+</head>
+<body>
+<header>
+
+    <div class="QuanLiDienThoai">
+        <h1>Quản lý điện thoại</h1>
+    </div>
+</header>
+<div class="container">
+    <div class="content">
+        <div class="phone-info">
+            <h2>Thông tin điện thoại</h2>
+            <input type="text" placeholder="Mã điện thoại" id="id">
+            <input type="text" placeholder="Tên" id="namePhone">
+            <select id="gender">
+                <option value="">Hãng</option>
+                <option style="background: black" value="iphone">Iphone</option>
+                <option style="background: black" value="oppo">Oppo</option>
+            </select>
+            <input type="text" placeholder="Giá" id="price">
+            <input type="file" accept="image/*" id="img">
+            <button id="add" onclick="addPhone()">Add</button>
+            <button id="edit" onclick="updatePhone()">Save</button>
+
+        </div>
+        <div class="phone-list">
+            <h2>Danh sách điện thoại</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Mã điện thoại</th>
+                    <th>Tên</th>
+                    <th>Hãng sản xuất</th>
+                    <th>Giá</th>
+                    <th>Ảnh</th>
+
+                </tr>
+                </thead>
+                <tbody id="list-phone">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
